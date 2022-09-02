@@ -24,12 +24,13 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.Test
     public void findBonusAmountError() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(1000);
-        int expected = 1000;
+        int expected = 1;
 
         assertEquals(expected, actual);
     }

@@ -3,10 +3,10 @@ package ru.netology.service;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @org.testng.annotations.Test
-     void findBonusAmountMin() {
+    public void findBonusAmountMin() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(900);
@@ -16,7 +16,7 @@ class CashbackHackServiceTest {
     }
 
     @org.testng.annotations.Test
-    void findBonusAmountMax() {
+    public void findBonusAmountMax() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(100);
@@ -24,15 +24,14 @@ class CashbackHackServiceTest {
 
         assertEquals(actual, expected);
     }
+
     @org.testng.annotations.Test
-    void findBonusAmountError() {
+    public void findBonusAmountError() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(1000);
-        int expected = 1000;
+        int expected = 0;
 
         assertEquals(actual, expected);
     }
-
-
 }

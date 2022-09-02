@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CashbackHackServiceTest {
 
     @Test
-    void test() {
+    void findBonusAmountMin() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(900);
@@ -17,7 +17,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void test1() {
+    void findBonusAmountMax() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(100);
@@ -25,12 +25,13 @@ class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void test2() {
+    void findBonusAmountError() {
         CashbackHackService service = new CashbackHackService();
 
         int actual = service.remain(1000);
-        int expected = 1000;
+        int expected = 0;
 
         assertEquals(expected, actual);
     }
